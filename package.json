@@ -1,0 +1,14 @@
+{
+    "esy": {
+      "build": "dune build -p aoc_2023"
+    },
+    "dependencies": {
+      "ocaml": "5.1.x",
+      "@opam/reason": "*",
+      "@opam/dune": "*"
+    },
+    "devDependencies": {
+      "@opam/merlin": "*",
+      "@opam/ocaml-lsp-server": "*"
+    }
+  }

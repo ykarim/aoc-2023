@@ -1,0 +1,13 @@
+*.swp
+.DS_Store
+.vscode
+**/lib/
+**/node_modules
+**/*.bs.js
+.merlin
+*.install
+*.log
+.bsb.lock
+tmp
+_esy
+**/esy.lock/
