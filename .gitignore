@@ -1,7 +1,6 @@
 *.swp
 .DS_Store
 .vscode
-**/lib/
 **/node_modules
 **/*.bs.js
 .merlin
