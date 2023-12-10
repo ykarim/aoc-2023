@@ -144,7 +144,7 @@ let read_lines = file => {
   collect_lines;
 };
 
-let games = read_lines("inputs/day2/file1.txt") |> Seq.map(parse_game) |> List.of_seq;
+let games = read_lines("inputs/day2.txt") |> Seq.map(parse_game) |> List.of_seq;
 
 let exec = (): unit => {
     print_endline(string_of_int(part1(games, 0)));
