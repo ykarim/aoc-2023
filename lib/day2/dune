@@ -1,3 +1,0 @@
-(library
- (name Day2)
- (libraries camlp-streams str))

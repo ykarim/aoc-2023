@@ -1,0 +1,22 @@
+# dune build -p day2
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/ykarim/.cache/dune/db
+# Workspace root: "/Users/ykarim/Documents/Personal Forks/aoc-2023"
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" :
+#            "/Users/ykarim/Documents/Personal Forks/aoc-2023/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; instrument_with = []
+#  }

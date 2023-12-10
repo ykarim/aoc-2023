@@ -1,3 +1,5 @@
+include FileReader.File_reader;
+
 let r: int = 12;
 let g: int = 13;
 let b: int = 14;
@@ -130,23 +132,11 @@ let rec part2 = (games: list((int, list(list((int, color))))), sum: int): int =>
     }
 }
 
-let read_lines = file => {
-  let input = open_in(file);
-  let rec collect_lines = () => {
-    switch (input_line(input)) {
-    | line => Seq.Cons(line, collect_lines)
-    | exception End_of_file =>
-      close_in(input);
-      Seq.Nil;
-    };
-  };
-
-  collect_lines;
-};
-
 let games = read_lines("inputs/day2.txt") |> Seq.map(parse_game) |> List.of_seq;
 
 let exec = (): unit => {
     print_endline(string_of_int(part1(games, 0)));
     print_endline(string_of_int(part2(games, 0)));
 }
+
+let () = exec();

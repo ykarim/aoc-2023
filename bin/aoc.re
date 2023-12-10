@@ -1,1 +1,0 @@
-let () = Day2.exec();
