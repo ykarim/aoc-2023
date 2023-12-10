@@ -1,14 +1,10 @@
 {
-    "esy": {
-      "build": "dune build -p aoc_2023"
-    },
-    "dependencies": {
-      "ocaml": "5.1.x",
-      "@opam/reason": "*",
-      "@opam/dune": "*"
-    },
-    "devDependencies": {
-      "@opam/merlin": "*",
-      "@opam/ocaml-lsp-server": "*"
-    }
-  }
+  "esy": { "build": "dune build -p aoc_2023" },
+  "dependencies": {
+    "@opam/camlp-streams": "5.0.1",
+    "@opam/dune": "*",
+    "@opam/reason": "*",
+    "ocaml": "5.1.x"
+  },
+  "devDependencies": { "@opam/merlin": "*", "@opam/ocaml-lsp-server": "*" }
+}

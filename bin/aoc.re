@@ -1,1 +1,1 @@
-let () = print_endline("Hello");
+let () = Day2.exec();
