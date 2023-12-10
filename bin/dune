@@ -1,4 +1,4 @@
 (executables
- (names day2)
- (public_names day2)
+ (names day2 day4)
+ (public_names day2 day4)
  (libraries FileReader str))

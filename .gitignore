@@ -10,3 +10,5 @@
 tmp
 _esy
 **/esy.lock/
+_build
+_build/
