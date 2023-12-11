@@ -62,7 +62,7 @@ let part2 = (lines: list((int, IntSet.t, IntSet.t))): int => {
     let card_counts = Array.make(length, 1);
 
     lines
-    |> List.map(parsed => {
+    |> List.iter(parsed => {
             let (id, wins, nums) = parsed;
             let match_cnt = IntSet.inter(wins, nums) |> IntSet.cardinal;
             // Iterate from card ahead at index i to the last card we'll make a copy of

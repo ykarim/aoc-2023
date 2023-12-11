@@ -1,4 +1,4 @@
-# dune build -p day2
+# dune build
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /Users/ykarim/.cache/dune/db
@@ -7,7 +7,7 @@
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
-#  ; profile = Release
+#  ; profile = Dev
 #  ; merlin = true
 #  ; fdo_target_exe = None
 #  ; build_dir = In_build_dir "default"
@@ -15,8 +15,334 @@
 #      map
 #        { "INSIDE_DUNE" :
 #            "/Users/ykarim/Documents/Personal Forks/aoc-2023/_build/default"
-#        ; "OCAML_COLOR" : "always"
-#        ; "OPAMCOLOR" : "always"
 #        }
 #  ; instrument_with = []
 #  }
+$ /Users/ykarim/_opam/bin/ocamlc.opt -config > /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/dune_917910_output
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I lib/file_reader/.FileReader.objs/byte -no-alias-deps -opaque -o lib/file_reader/.FileReader.objs/byte/fileReader.cmo -c -impl lib/file_reader/fileReader.ml-gen)
+$ (cd _build/default && /Users/ykarim/_opam/bin/refmt --print binary bin/day4.re) > _build/default/bin/day4.re.ml
+> File "bin/day4.re", line 16, characters 55-56:
+> 16 | let rec parse_winning_nums = (nums: string, set: IntSet): IntSet => {
+>                                                             ^
+> Error: Unclosed "(" (opened line 16, column 29)
+>
+[1]
+$ (cd _build/default && /Users/ykarim/_opam/bin/refmt --print binary lib/file_reader/file_reader.re) > _build/default/lib/file_reader/file_reader.re.ml
+$ (cd _build/default && /Users/ykarim/_opam/bin/refmt --print binary bin/day2.re) > _build/default/bin/day2.re.ml
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamldep.opt -modules -impl lib/file_reader/file_reader.re.ml) > _build/default/lib/file_reader/.FileReader.objs/fileReader__File_reader.impl.d
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamldep.opt -modules -impl bin/day2.re.ml) > _build/default/bin/.day2.eobjs/dune__exe__Day2.impl.d
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I bin/.day2.eobjs/byte -no-alias-deps -opaque -o bin/.day2.eobjs/byte/dune__exe.cmo -c -impl bin/.day2.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/file_reader/.FileReader.objs/byte -I /Users/ykarim/_opam/lib/ocaml/str -no-alias-deps -opaque -open FileReader -o lib/file_reader/.FileReader.objs/byte/fileReader__File_reader.cmo -c -impl lib/file_reader/file_reader.re.ml)
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/file_reader/FileReader.cma lib/file_reader/.FileReader.objs/byte/fileReader.cmo lib/file_reader/.FileReader.objs/byte/fileReader__File_reader.cmo)
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.day2.eobjs/byte -I /Users/ykarim/_opam/lib/ocaml/str -I lib/file_reader/.FileReader.objs/byte -no-alias-deps -opaque -open Dune__exe -o bin/.day2.eobjs/byte/dune__exe__Day2.cmo -c -impl bin/day2.re.ml)
+> File "bin/day2.re", line 125, characters 12-14:
+> 125 |         | [(id, rounds), ...rest] => {
+>                   ^^
+> Error (warning 27 [unused-var-strict]): unused variable id.
+[2]
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I lib/file_reader/.FileReader.objs/byte -I lib/file_reader/.FileReader.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o lib/file_reader/.FileReader.objs/native/fileReader.cmx -c -impl lib/file_reader/fileReader.ml-gen)
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm60e501.s:31:15: error: unknown token in expression
+>  orr x0, xzr, #1
+>               ^
+> File "lib/file_reader/fileReader.ml-gen", line 1:
+> Error: Assembler error, input left in file /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm60e501.s
+[2]
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I bin/.day2.eobjs/byte -I bin/.day2.eobjs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o bin/.day2.eobjs/native/dune__exe.cmx -c -impl bin/.day2.eobjs/dune__exe.ml-gen)
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm99b5f3.s:31:15: error: unknown token in expression
+>  orr x0, xzr, #1
+>               ^
+> File "bin/.day2.eobjs/dune__exe.ml-gen", line 1:
+> Error: Assembler error, input left in file /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm99b5f3.s
+[2]
+$ (cd _build/default && /Users/ykarim/_opam/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/file_reader/.FileReader.objs/byte -I lib/file_reader/.FileReader.objs/native -I /Users/ykarim/_opam/lib/ocaml/str -intf-suffix .ml -no-alias-deps -opaque -open FileReader -o lib/file_reader/.FileReader.objs/native/fileReader__File_reader.cmx -c -impl lib/file_reader/file_reader.re.ml)
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:37:11: error: unknown token in expression
+>  mov x16, #34
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:38:16: error: brackets expression not supported on this target
+>  stp x16, x30, [sp, #-16]!
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:39:2: error: invalid instruction mnemonic 'bl'
+>  bl _caml_call_realloc_stack
+>  ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:40:16: error: brackets expression not supported on this target
+>  ldp x16, x30, [sp], #16
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:45:11: error: brackets expression not supported on this target
+>  ldr x16, [x28, #40]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:46:16: error: unknown token in expression
+>  add x16, x16, #328
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:47:2: error: unknown use of instruction mnemonic without a size suffix
+>  cmp sp, x16
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:48:2: error: invalid instruction mnemonic 'bcc'
+>  bcc L101
+>  ^~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:49:14: error: unknown token in expression
+>  sub sp, sp, #16
+>              ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:52:11: error: brackets expression not supported on this target
+>  str x30, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:54:2: error: unknown use of instruction mnemonic without a size suffix
+>  mov x2, x0
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:55:15: error: unknown token in expression
+>  orr x1, xzr, #1
+>               ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:56:2: error: invalid instruction mnemonic 'adrp'
+>  adrp x0, _camlStdlib.30@GOTPAGE
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:57:10: error: brackets expression not supported on this target
+>  ldr x0, [x0, _camlStdlib.30@GOTPAGEOFF]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:60:2: error: invalid instruction mnemonic 'bl'
+>  bl _camlStdlib.open_in_gen_288
+>  ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:63:11: error: brackets expression not supported on this target
+>  ldr x16, [x28, #0]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:64:16: error: unknown token in expression
+>  sub x27, x27, #32
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:65:2: error: unknown use of instruction mnemonic without a size suffix
+>  cmp x27, x16
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:66:2: error: invalid instruction mnemonic 'b.lo'
+>  b.lo L105
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:67:20: error: unknown token in expression
+> L104: add x4, x27, #8
+>                    ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:68:11: error: unknown token in expression
+>  movz x5, #3319, lsl #0
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:69:10: error: brackets expression not supported on this target
+>  str x5, [x4, #-8]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:70:2: error: invalid instruction mnemonic 'adrp'
+>  adrp x6, _camlFileReader__File_reader.collect_lines_274@GOTPAGE
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:71:10: error: brackets expression not supported on this target
+>  ldr x6, [x6, _camlFileReader__File_reader.collect_lines_274@GOTPAGEOFF]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:72:10: error: brackets expression not supported on this target
+>  str x6, [x4, #0]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:73:11: error: unknown token in expression
+>  movz x7, #5, lsl #0
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:74:11: error: unknown token in expression
+>  movk x7, #256, lsl #48
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:75:10: error: brackets expression not supported on this target
+>  str x7, [x4, #8]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:76:10: error: brackets expression not supported on this target
+>  str x0, [x4, #16]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:77:2: error: unknown use of instruction mnemonic without a size suffix
+>  mov x0, x4
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:78:11: error: brackets expression not supported on this target
+>  ldr x30, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:79:14: error: unknown token in expression
+>  add sp, sp, #16
+>              ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:83:7: error: invalid instruction mnemonic 'bl'
+> L105: bl _caml_call_gc
+>       ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:84:7: error: invalid instruction mnemonic 'b'
+> L103: b L104
+>       ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:90:11: error: unknown token in expression
+>  mov x16, #36
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:91:16: error: brackets expression not supported on this target
+>  stp x16, x30, [sp, #-16]!
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:92:2: error: invalid instruction mnemonic 'bl'
+>  bl _caml_call_realloc_stack
+>  ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:93:16: error: brackets expression not supported on this target
+>  ldp x16, x30, [sp], #16
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:97:11: error: brackets expression not supported on this target
+>  ldr x16, [x28, #40]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:98:16: error: unknown token in expression
+>  add x16, x16, #344
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:99:2: error: unknown use of instruction mnemonic without a size suffix
+>  cmp sp, x16
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:100:2: error: invalid instruction mnemonic 'bcc'
+>  bcc L110
+>  ^~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:101:14: error: unknown token in expression
+>  sub sp, sp, #16
+>              ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:104:11: error: brackets expression not supported on this target
+>  str x30, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:106:10: error: brackets expression not supported on this target
+>  str x1, [sp, #0]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:107:2: error: invalid instruction mnemonic 'adr'
+>  adr x16, L108
+>  ^~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:108:11: error: brackets expression not supported on this target
+>  str x26, [sp, -16]!
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:109:11: error: brackets expression not supported on this target
+>  str x16, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:111:2: error: unknown use of instruction mnemonic without a size suffix
+>  mov x26, sp
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:112:10: error: brackets expression not supported on this target
+>  ldr x0, [x1, #16]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:114:2: error: invalid instruction mnemonic 'bl'
+>  bl _camlStdlib.input_line_326
+>  ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:116:11: error: brackets expression not supported on this target
+>  ldr x26, [sp], 16
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:118:2: error: invalid instruction mnemonic 'b'
+>  b L106
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:120:2: error: invalid instruction mnemonic 'adrp'
+>  adrp x7, _camlStdlib@GOTPAGE
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:121:10: error: brackets expression not supported on this target
+>  ldr x7, [x7, _camlStdlib@GOTPAGEOFF]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:123:10: error: brackets expression not supported on this target
+>  ldr x8, [x7, #88]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:124:2: error: unknown use of instruction mnemonic without a size suffix
+>  cmp x0, x8
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:125:2: error: invalid instruction mnemonic 'b.ne'
+>  b.ne L107
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:126:11: error: brackets expression not supported on this target
+>  ldr x13, [sp, #0]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:127:10: error: brackets expression not supported on this target
+>  ldr x0, [x13, #16]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:129:2: error: invalid instruction mnemonic 'adrp'
+>  adrp x8, _caml_ml_close_channel@GOTPAGE
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:130:10: error: brackets expression not supported on this target
+>  ldr x8, [x8, _caml_ml_close_channel@GOTPAGEOFF]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:131:2: error: invalid instruction mnemonic 'bl'
+>  bl _caml_c_call
+>  ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:133:15: error: unknown token in expression
+>  orr x0, xzr, #1
+>               ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:134:11: error: brackets expression not supported on this target
+>  ldr x30, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:135:14: error: unknown token in expression
+>  add sp, sp, #16
+>              ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:140:2: error: invalid instruction mnemonic 'bl'
+>  bl _caml_reraise_exn
+>  ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:144:11: error: brackets expression not supported on this target
+>  ldr x16, [x28, #0]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:145:16: error: unknown token in expression
+>  sub x27, x27, #24
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:146:2: error: unknown use of instruction mnemonic without a size suffix
+>  cmp x27, x16
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:147:2: error: invalid instruction mnemonic 'b.lo'
+>  b.lo L116
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:148:21: error: unknown token in expression
+> L115: add x11, x27, #8
+>                     ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:149:16: error: unknown token in expression
+>  orr x12, xzr, #2048
+>                ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:150:11: error: brackets expression not supported on this target
+>  str x12, [x11, #-8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:151:10: error: brackets expression not supported on this target
+>  str x0, [x11, #0]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:152:11: error: brackets expression not supported on this target
+>  ldr x14, [sp, #0]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:153:11: error: brackets expression not supported on this target
+>  str x14, [x11, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:154:2: error: unknown use of instruction mnemonic without a size suffix
+>  mov x0, x11
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:155:11: error: brackets expression not supported on this target
+>  ldr x30, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:156:14: error: unknown token in expression
+>  add sp, sp, #16
+>              ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:160:7: error: invalid instruction mnemonic 'bl'
+> L116: bl _caml_call_gc
+>       ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:161:7: error: invalid instruction mnemonic 'b'
+> L114: b L115
+>       ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:168:14: error: unknown token in expression
+>  sub sp, sp, #16
+>              ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:171:11: error: brackets expression not supported on this target
+>  str x30, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:173:2: error: invalid instruction mnemonic 'adrp'
+>  adrp x1, _camlFileReader__File_reader.1@GOTPAGE
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:174:10: error: brackets expression not supported on this target
+>  ldr x1, [x1, _camlFileReader__File_reader.1@GOTPAGEOFF]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:175:2: error: invalid instruction mnemonic 'adrp'
+>  adrp x0, _camlFileReader__File_reader@GOTPAGE
+>  ^~~~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:176:10: error: brackets expression not supported on this target
+>  ldr x0, [x0, _camlFileReader__File_reader@GOTPAGEOFF]
+>          ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:177:2: error: unknown use of instruction mnemonic without a size suffix
+>  mov x29, sp
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:180:11: error: brackets expression not supported on this target
+>  ldr x16, [x28, 64]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:181:2: error: unknown use of instruction mnemonic without a size suffix
+>  mov sp, x16
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:182:2: error: invalid instruction mnemonic 'bl'
+>  bl _caml_initialize
+>  ^~
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:183:2: error: unknown use of instruction mnemonic without a size suffix
+>  mov sp, x29
+>  ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:185:15: error: unknown token in expression
+>  orr x0, xzr, #1
+>               ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:186:11: error: brackets expression not supported on this target
+>  ldr x30, [sp, #8]
+>           ^
+> /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s:187:14: error: unknown token in expression
+>  add sp, sp, #16
+>              ^
+> File "lib/file_reader/file_reader.re", line 1:
+> Error: Assembler error, input left in file /var/folders/67/20hfhwh54ln9g0cplb606q_w0000gn/T/build_0c46e9_dune/camlasm17b0c3.s
+[2]
